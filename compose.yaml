@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    restart: always
+    environment:
+      - 'MYSQL_DATABASE=JwtAuth'
+      - 'MYSQL_PASSWORD=password'
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=user'
+    ports:
+      - '3306:3306'
